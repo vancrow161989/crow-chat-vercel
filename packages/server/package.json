@@ -10,13 +10,19 @@
   "_comment": "this is temporary. start - is built in comand so it command is 'bun start' without 'run' 'bun --watch run index.ts' but this dev is custom command so it needs to add 'run' - 'bun run dev'",
   "devDependencies": {
     "@types/bun": "latest",
-    "@types/express": "^5.0.6"
+    "@types/express": "^5.0.6",
+    "prisma": "^7.8.0"
   },
   "peerDependencies": {
     "typescript": "^5"
   },
   "dependencies": {
-    "dotenv": "^17.4.0",
-    "express": "^5.2.1"
+    "@prisma/adapter-mariadb": "^7.8.0",
+    "@prisma/client": "^7.8.0",
+    "dayjs": "^1.11.21",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "openai": "^6.34.0",
+    "zod": "^4.4.3"
   }
 }
