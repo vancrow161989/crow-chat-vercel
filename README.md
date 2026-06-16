@@ -1,5 +1,3 @@
-Here’s a **complete README.md** you can copy and paste directly into your repo. It’s safe (no real API keys exposed), includes all the standard sections, and uses a permissive license placeholder so you don’t have to pause or edit later:
-
 ````markdown
 # 🎡 Crow Chat – AI Theme Park Assistant
 
