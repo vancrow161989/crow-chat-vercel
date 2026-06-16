@@ -1,19 +1,12 @@
-import { useEffect, useState } from "react";
-import { Button } from "./components/ui/button";
+// import Chatbot from "./components/chat/chatbot";
+
+import ReviewList from "./components/reviews/review-list";
 
 function App() {
-  const [message, setMessage] = useState("");
-
-  useEffect(() => {
-    fetch("/api/hello")
-      .then((res) => res.json())
-      .then((data) => setMessage(data.message));
-  }, []);
-
   return (
     <>
-      <Button>Click Me!</Button>
-      <p className="text-5xl font-bold">{message}! </p>
+      {/* <Chatbot /> */}
+      <ReviewList productId={2} />
     </>
   );
 }
