@@ -27,7 +27,7 @@ export const reviewApi = {
 
   async summarizeReviews(productId: number) {
     const { data } = await axios.post<SummarizeResponse>(
-      `api/products/${productId}/reviews/summarize`
+      `/api/products/${productId}/reviews/summarize`
     );
 
     return data;

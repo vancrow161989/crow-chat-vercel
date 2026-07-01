@@ -6,13 +6,12 @@ export type Message = {
 const conversations: Record<string, Message[]> = {};
 
 export const conversationRepository = {
-  setConverations(conversationId: string, prompt: string) {
+  addUserMessage(conversationId: string, prompt: string) {
     if (!conversations[conversationId]) {
       conversations[conversationId] = [];
     }
-    const messages = conversations[conversationId];
 
-    messages.push({
+    conversations[conversationId].push({
       role: "user",
       content: prompt,
     });

@@ -24,7 +24,7 @@ const ReviewList = ({ productId }: Props) => {
 
   if (reviewsQuery.isLoading) {
     return (
-      <div className="flex flex-col gap-5">
+      <div className="flex flex-col gap-5 pt-6 max-w-5xl mx-auto pb-6">
         {[1, 2, 3].map((i) => (
           <ReviewSkeleton key={i} />
         ))}
@@ -46,10 +46,13 @@ const ReviewList = ({ productId }: Props) => {
     reviewsQuery.data?.summary || summaryMutation.data?.summary;
 
   return (
-    <div>
+    <div className="pt-6 max-w-5xl mx-auto pb-6">
       <div className="mb-5">
         {currentSummary ? (
-          <p>{currentSummary}</p>
+          <>
+            <h2 className="font-bold pb-2">Summary:</h2>
+            <p>{currentSummary}</p>
+          </>
         ) : (
           <>
             <Button

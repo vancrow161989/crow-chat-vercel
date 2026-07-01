@@ -42,6 +42,8 @@ const Chatbot = () => {
       if (!navigator.onLine) {
         console.error("No internet connection");
         setError("No internet connection");
+      } else if (axios.isAxiosError(err) && err.response?.status === 429) {
+        setError(err.response.data.message);
       } else {
         console.error(err);
         setError("Something went wrong, try again!");
@@ -52,7 +54,7 @@ const Chatbot = () => {
   };
 
   return (
-    <div className="relative flex flex-col h-screen pt-8 overflow-y-auto pb-9">
+    <div className="relative flex flex-col h-[calc(100vh-150px)] sm:h-[calc(100vh-129px)] pt-8 overflow-y-auto pb-9">
       <div className="flex flex-col flex-1 ">
         <div className="flex flex-col w-full max-w-5xl gap-3 pb-8 mx-auto">
           <ChatMessages messages={messages} />

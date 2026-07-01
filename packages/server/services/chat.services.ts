@@ -27,15 +27,16 @@ const instructions = template.replace("{{parkInfo}}", parkInfo);
 
 export const chatService = {
   async sendMessage(prompt: string, conversationId: string) {
+    conversationRepository.addUserMessage(conversationId, prompt);
+    const history =
+      conversationRepository.getLastMessages(conversationId) ?? [];
     const messages = [
       {
         role: "system",
         content: instructions,
       },
-      ...(conversationRepository.getLastMessages(conversationId) ?? []),
+      ...history,
     ];
-
-    conversationRepository.setConverations(conversationId, prompt);
 
     const response = await openRouterClient.generateText({ messages });
 

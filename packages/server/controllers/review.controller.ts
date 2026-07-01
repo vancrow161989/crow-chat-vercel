@@ -11,7 +11,6 @@ export const reviewsController = {
       res.status(400).json({ error: "Invalid Product ID. " });
       return;
     }
-
     const product = await productRepository.getProduct(productId);
 
     if (!product) {
@@ -37,7 +36,7 @@ export const reviewsController = {
     }
 
     const product = await productRepository.getProduct(productId);
-
+    console.log("PRODUCT____________", product);
     if (!product) {
       res.status(400).json({ error: "Invalid Product" });
       return;
