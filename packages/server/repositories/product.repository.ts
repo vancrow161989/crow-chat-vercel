@@ -6,4 +6,12 @@ export const productRepository = {
       where: { id: productId },
     });
   },
+  getAll() {
+    return prisma.product.findMany({
+      orderBy: { name: "asc" },
+      include: {
+        _count: { select: { reviews: true } },
+      },
+    });
+  },
 };

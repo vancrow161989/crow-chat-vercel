@@ -8,6 +8,7 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 app.set("json spaces", 2);
+app.set("trust proxy", 1);
 app.use(router);
 app.use(errorHandler);
 
