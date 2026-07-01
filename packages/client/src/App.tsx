@@ -1,12 +1,10 @@
-// import Chatbot from "./components/chat/chatbot";
-
-import ReviewList from "./components/reviews/review-list";
+import Chatbot from "./components/chat/chatbot";
 
 function App() {
   return (
     <>
-      {/* <Chatbot /> */}
-      <ReviewList productId={2} />
+      <Chatbot />
+      {/* <ReviewList productId={2} /> */}
     </>
   );
 }
