@@ -7,7 +7,7 @@ const Chat = () => {
         <p className="max-w-2xl px-4 py-2 mx-auto mt-4 text-sm text-center text-yellow-800 bg-yellow-100 border border-yellow-300 rounded-lg">
           This is a demo — please limit your testing to about 5 prompts to keep
           API costs down. <br />
-          Thanks for trying it out!
+          AI replies may occasionally return a credit/token error.
         </p>
       </div>
       <Chatbot />

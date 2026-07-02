@@ -30,10 +30,16 @@ export const reviewService = {
       },
     ];
 
-    const { message } = await openRouterClient.generateText({ messages });
+    const result = await openRouterClient.generateText({ messages });
 
-    await reviewRepository.storeReviewSummary(productId, message);
+    if (result.response === "Failed") {
+      const error = new Error(result.message) as Error & { status?: number };
+      error.status = 402;
+      throw error;
+    }
 
-    return message;
+    await reviewRepository.storeReviewSummary(productId, result.message);
+
+    return result.message;
   },
 };

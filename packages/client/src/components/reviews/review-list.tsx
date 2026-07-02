@@ -48,6 +48,10 @@ const ReviewList = ({ productId }: Props) => {
   return (
     <div className="pt-6 max-w-5xl mx-auto pb-6">
       <div className="mb-5">
+        <p className="max-w-2xl px-4 py-2 mx-auto mt-4 text-sm text-center text-yellow-800 bg-yellow-100 border border-yellow-300 rounded-lg">
+          Note: This is a personal demo project running on a free-tier AI
+          budget. AI replies may occasionally return a credit/token error.
+        </p>
         {currentSummary ? (
           <>
             <h2 className="font-bold pb-2">Summary:</h2>
