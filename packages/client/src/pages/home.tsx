@@ -12,8 +12,8 @@ const Home = () => {
 
       <ul className="mt-3 ml-5 list-disc max-w-md text-muted-foreground space-y-2 mt-0">
         <li>
-          <strong className="text-black">WonderWorld Support Chatbot</strong> –
-          A customer support chatbot for an imaginary theme park that answers
+          <strong className="text-black">MikeWorld Support Chatbot</strong> – A
+          customer support chatbot for an imaginary theme park that answers
           questions about rides, tickets, dining, accommodations, and more.
         </li>
         <li>
@@ -24,7 +24,7 @@ const Home = () => {
       </ul>
       <div className="flex gap-4">
         <Link to="/chat">
-          <Button>Try WonderWorld Chatbot</Button>
+          <Button>Try MikeWorld Chatbot</Button>
         </Link>
         <Link to="/products">
           <Button variant="outline">Try Review Summarizer</Button>
