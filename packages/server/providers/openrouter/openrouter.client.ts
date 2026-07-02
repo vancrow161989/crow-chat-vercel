@@ -18,7 +18,7 @@ type OpenrouterGenerateText = {
 
 export const openRouterClient = {
   async generateText({
-    model = "openai/gpt-4.1",
+    model = "openai/gpt-oss-20b:free",
     messages,
     temperature = 0.2,
     maxTokens = 100,
