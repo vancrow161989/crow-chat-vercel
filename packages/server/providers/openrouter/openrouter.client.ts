@@ -21,7 +21,7 @@ export const openRouterClient = {
     model = "openai/gpt-4.1",
     messages,
     temperature = 0.2,
-    maxTokens = 300,
+    maxTokens = 284,
   }: OpenrouterGenerateText): Promise<AiCommonResponse> {
     // Commented for reference - For OpenAI
     // const { prompt } = req.body;
