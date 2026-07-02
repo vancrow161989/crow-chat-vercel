@@ -5,20 +5,22 @@
   "private": true,
   "scripts": {
     "start": "bun run index.ts",
-    "dev": "bun --watch run index.ts"
+    "dev": "bun --watch run index.ts",
+    "seed": "bun run prisma/seed.ts"
   },
-  "_comment": "this is temporary. start - is built in comand so it command is 'bun start' without 'run' 'bun --watch run index.ts' but this dev is custom command so it needs to add 'run' - 'bun run dev'",
   "devDependencies": {
     "@types/bun": "latest",
     "@types/express": "^5.0.6",
+    "@types/cors": "^2.8.17",
     "prisma": "^7.8.0"
   },
   "peerDependencies": {
     "typescript": "^5"
   },
   "dependencies": {
-    "@prisma/adapter-mariadb": "^7.8.0",
+    "@prisma/adapter-pg": "^7.8.0",
     "@prisma/client": "^7.8.0",
+    "cors": "^2.8.5",
     "dayjs": "^1.11.21",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",

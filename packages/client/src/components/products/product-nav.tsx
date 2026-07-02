@@ -36,7 +36,7 @@ const ProductNav = () => {
           ))}
         </div>
       ) : (
-        "<p>No product entries.</p>"
+        <p>No product entries.</p>
       )}
     </div>
   );
