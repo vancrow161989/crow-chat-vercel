@@ -1,3 +1,4 @@
+import { apiClient } from "@/lib/api-client";
 import axios from "axios";
 import { useRef, useState } from "react";
 import notificationSound from "../../assets/sounds/notification.mp3";
@@ -14,7 +15,7 @@ const notificationAudio = new Audio(notificationSound);
 notificationAudio.volume = 0.5;
 
 type ChatResponse = {
-  resposne: boolean;
+  response: boolean;
   message: string;
   id: string;
 };
@@ -32,7 +33,7 @@ const Chatbot = () => {
       setError("");
       popAudio.play();
 
-      const { data } = await axios.post<ChatResponse>("api/chat", {
+      const { data } = await apiClient.post<ChatResponse>("api/chat", {
         prompt: prompt,
         conversationId: conversationId.current,
       });

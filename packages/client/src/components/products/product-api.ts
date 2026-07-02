@@ -1,6 +1,4 @@
-// Add this type + method to your existing review-api.ts
-
-import axios from "axios";
+import { apiClient } from "@/lib/api-client";
 
 export type Product = {
   id: number;
@@ -10,7 +8,7 @@ export type Product = {
 };
 export const productApi = {
   async fetchProducts() {
-    const { data } = await axios.get<Product[]>("/api/products");
+    const { data } = await apiClient.get<Product[]>("/api/products");
     return data;
   },
 };

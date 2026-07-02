@@ -1,4 +1,4 @@
-import axios from "axios";
+import { apiClient } from "@/lib/api-client";
 
 type Review = {
   id: number;
@@ -19,14 +19,14 @@ export type SummarizeResponse = {
 
 export const reviewApi = {
   async fetchReviews(productId: number) {
-    const { data } = await axios.get<GetReviewResponse>(
+    const { data } = await apiClient.get<GetReviewResponse>(
       `/api/products/${productId}/reviews`
     );
     return data;
   },
 
   async summarizeReviews(productId: number) {
-    const { data } = await axios.post<SummarizeResponse>(
+    const { data } = await apiClient.post<SummarizeResponse>(
       `/api/products/${productId}/reviews/summarize`
     );
 
