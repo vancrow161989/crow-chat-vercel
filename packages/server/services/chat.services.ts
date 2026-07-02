@@ -19,7 +19,7 @@ const template = fs.readFileSync(
 );
 
 const parkInfo = fs.readFileSync(
-  path.join(__dirname, "..", "prompts", "WonderWorld.md"),
+  path.join(__dirname, "..", "prompts", "MikeWorld.md"),
   "utf-8"
 );
 
