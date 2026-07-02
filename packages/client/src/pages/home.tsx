@@ -22,12 +22,14 @@ const Home = () => {
           concise, easy-to-read summaries.
         </li>
       </ul>
-      <div className="flex gap-4">
+      <div className="flex flex-col w-full md:flex-row gap-4 md:w-auto">
         <Link to="/chat">
-          <Button>Try MikeWorld Chatbot</Button>
+          <Button className="w-full md:w-auto">Try MikeWorld Chatbot</Button>
         </Link>
         <Link to="/products">
-          <Button variant="outline">Try Review Summarizer</Button>
+          <Button variant="outline" className="w-full md:w-auto">
+            Try Review Summarizer
+          </Button>
         </Link>
       </div>
     </div>
